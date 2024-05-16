@@ -1,4 +1,51 @@
+@font-face {
+    font-family: 'Baveuse';
+    src: url('./assets/fonts/Baveuse.woff') format('woff'),
+        url('./assets/fonts/Baveuse.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(./assets/images/Archer\ Background.jpg);
+    background-color: rgba(0, 0, 0, 0.425);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; 
+    width: 100vw;
+}
+
 nav {
-    background-color: black;
-    height: 30%;
+    background-color: rgba(15, 15, 15, 0.788);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 70px;
+    padding: 10px;
+}
+
+nav p {
+    font-family: 'Baveuse';
+    font-size: 50px;
+    color: white;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav p:hover {
+    transform: scale(1.1); 
+    color: #ccc; 
+    cursor: pointer;
+}
+
+.navBtn {
+    height: 30px;
+    width: 50px;
+    text-align: center;
 }
