@@ -1,5 +1,5 @@
 # restaurant-page
-This the Restaurant Page Project as assigned by [The Odin Project](https://www.TheOdinProject.com)
+This is the Restaurant Page Project as assigned by [The Odin Project](https://www.TheOdinProject.com)
 
 
 # To Do List
@@ -12,7 +12,7 @@ This the Restaurant Page Project as assigned by [The Odin Project](https://www.T
 
 - [ ] Setup Tabbed Browsing
   
-  
+
 - [ ] Stylize with CSS
 
 
