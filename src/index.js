@@ -85,7 +85,6 @@ function initialize() {
   aboutTab.addEventListener('click', () => {
     createTransitionImage(() => {
       loadAbout();
-      addWoodhouseImage();
     });
   });
 
