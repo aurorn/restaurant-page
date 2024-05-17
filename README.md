@@ -1,6 +1,8 @@
 # restaurant-page
 This is the Restaurant Page Project as assigned by [The Odin Project](https://www.TheOdinProject.com)
 
+[Live Page](https://aurorn.github.io/restaurant-page/)
+
 
 # To Do List
 
@@ -19,10 +21,10 @@ This is the Restaurant Page Project as assigned by [The Odin Project](https://ww
 - [✓] Create Menu Items
 
 
-- [ ] Add Hover Animation W/ Images Next To It With A Click Event
+- [✓] Add Hover Animation W/ Images Next To It With A Click Event
 
 
-- [ ] Add Text Boxes That Popup At The bottom That Explain Each Dish/Drink In Menu
+- [✓] Add Text Boxes That Popup At The bottom That Explain Each Dish/Drink In Menu
 
 
-- [ ] Add An About Section That Explains What The Purpose Of This Site and What Was Used
+- [✓] Add An About Section That Explains What The Purpose Of This Site and What Was Used
