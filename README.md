@@ -16,7 +16,7 @@ This is the Restaurant Page Project as assigned by [The Odin Project](https://ww
 - [✓] Stylize with CSS
 
 
-- [ ] Create Menu Items
+- [✓] Create Menu Items
 
 
 - [ ] Add Hover Animation W/ Images Next To It With A Click Event
