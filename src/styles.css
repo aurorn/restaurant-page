@@ -70,7 +70,7 @@ nav p {
   font-size: 50px;
   color: white;
   cursor: pointer;
-  transition: transform 0.1s ease, color 0.1s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 nav p:hover {
@@ -82,7 +82,6 @@ nav p:hover {
   flex: 1;
   display: flex;
   flex-direction: column;
-  
   align-items: center;
   text-align: center;
   padding: 80px;
@@ -92,20 +91,7 @@ nav p:hover {
 .home {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
-
-.menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
-
-.about {
-  display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 20px;
 }
@@ -124,4 +110,16 @@ nav p:hover {
 .description {
   font-size: 20px;
   color: #666;
+}
+
+.woodhouse-image {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  height: 500px;
+  width: auto;
+  transform: translateX(-50%);
+  
+  margin-bottom: 20px; 
+  z-index: 1000;
 }
