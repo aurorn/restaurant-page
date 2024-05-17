@@ -39,7 +39,7 @@ body {
   object-fit: cover;
   opacity: 0;
   z-index: 10000; 
-  animation: fadeIn 0.5s forwards, slideRight 1s 0.5s forwards; 
+  animation: fadeIn 0.5s forwards, slideRight 1s 0.5s forwards;
 }
 
 @keyframes fadeIn {
@@ -86,8 +86,8 @@ nav p:hover {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 80px 20px;
-  overflow: hidden;
+  padding: 80px 20px; 
+  overflow: hidden; 
 }
 
 .home {
@@ -95,7 +95,8 @@ nav p:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  flex: 1;
+  width: 100%;
 }
 
 .headline {
@@ -118,16 +119,23 @@ nav p:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: auto;
-  height: auto; 
   flex: 1;
+  width: 100%;
+  position: relative; 
+}
+
+.woodhouse-image {
+  max-width: 100%;
+  max-height: calc(100vh - 200px);
+  height: auto;
+  width: auto;
 }
 
 .speech-bubble {
   display: none;
   position: absolute;
-  left: 60%; 
-  top: 39%;
+  left: 60%;
+  top: 20%;
   transform: translateY(-50%);
   background-color: white;
   border: 2px solid black;
@@ -144,23 +152,43 @@ nav p:hover {
 .speech-bubble::after {
   content: '';
   position: absolute;
-  top: 50%; 
-  right: 90%;
-  transform: translateX(-50%);
+  top: 50%;
+  right: 100%; 
+  transform: translateY(-50%);
   border-width: 10px;
   border-style: solid;
-  border-color: white transparent transparent transparent;
+  border-color: transparent white transparent transparent;
 }
 
 .woodhouse-container:hover .speech-bubble {
   display: block;
 }
 
-.woodhouse-image {
-  max-width: 100%;
-  max-height: calc(100vh - 300px);
-  height: auto;
-  width: auto;
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  padding-top: 20px;
+}
+
+.menu-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 20%;
+  padding: 10px;
+  border-radius: 5px;
+  align-items: center; 
+}
+
+.menu-column img {
+  width: 100%; 
+  max-width: 200px; 
+  height: 150px; 
+  object-fit: contain; 
 }
 
 footer {
