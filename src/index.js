@@ -79,7 +79,6 @@ function initialize() {
   menuTab.addEventListener('click', () => {
     createTransitionImage(() => {
       loadMenu();
-      addWoodhouseImage();
     });
   });
 
