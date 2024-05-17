@@ -86,8 +86,8 @@ nav p:hover {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 80px;
-  overflow: auto;
+  padding: 80px 20px;
+  overflow: hidden;
 }
 
 .home {
@@ -114,13 +114,67 @@ nav p:hover {
   color: #666;
 }
 
+.woodhouse-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto; 
+  flex: 1;
+}
+
+.speech-bubble {
+  display: none;
+  position: absolute;
+  left: 60%; 
+  top: 39%;
+  transform: translateY(-50%);
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: 'Baveuse';
+  font-size: 16px;
+  color: black;
+  width: 200px;
+  text-align: center;
+  z-index: 1000;
+}
+
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  top: 50%; 
+  right: 90%;
+  transform: translateX(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+}
+
+.woodhouse-container:hover .speech-bubble {
+  display: block;
+}
+
 .woodhouse-image {
+  max-width: 100%;
+  max-height: calc(100vh - 300px);
+  height: auto;
+  width: auto;
+}
+
+footer {
+  background-color: rgba(15, 15, 15, 0.788);
+  color: white;
+  text-align: center;
+  padding: 10px;
   position: fixed;
   bottom: 0;
-  left: 50%;
-  height: 500px;
-  width: auto;
-  transform: translateX(-50%);
-  margin-bottom: 20px;
+  width: 100%;
   z-index: 1000;
+}
+
+footer p {
+  font-family: 'Baveuse';
+  margin: 0;
 }

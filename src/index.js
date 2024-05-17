@@ -43,6 +43,25 @@ function createTransitionImage(callback) {
   });
 }
 
+function addWoodhouseImage() {
+  
+  const woodhouseContainer = document.createElement('div');
+  woodhouseContainer.classList.add('woodhouse-container');
+
+  const woodhouseImg = document.createElement('img');
+  woodhouseImg.src = woodhouseImagePath;
+  woodhouseImg.classList.add('woodhouse-image');
+  woodhouseContainer.appendChild(woodhouseImg);
+
+  const speechBubble = document.createElement('div');
+  speechBubble.classList.add('speech-bubble');
+  speechBubble.innerText = "I shall fetch a rug!";
+  woodhouseContainer.appendChild(speechBubble);
+
+  const content = document.getElementById('content');
+  content.appendChild(woodhouseContainer);
+}
+
 function initialize() {
   loadNav();
 
@@ -51,25 +70,32 @@ function initialize() {
   const aboutTab = document.querySelector('nav p:nth-child(3)');
 
   homeTab.addEventListener('click', () => {
-    createTransitionImage(loadHome);
+    createTransitionImage(() => {
+      loadHome();
+      addWoodhouseImage();
+    });
   });
 
   menuTab.addEventListener('click', () => {
-    createTransitionImage(loadMenu);
+    createTransitionImage(() => {
+      loadMenu();
+      addWoodhouseImage();
+    });
   });
 
   aboutTab.addEventListener('click', () => {
-    createTransitionImage(loadAbout);
+    createTransitionImage(() => {
+      loadAbout();
+      addWoodhouseImage();
+    });
   });
 
-
   loadHome();
+  addWoodhouseImage();
 
-  
-  const woodhouseImg = document.createElement('img');
-  woodhouseImg.src = woodhouseImagePath;
-  woodhouseImg.classList.add('woodhouse-image');
-  document.body.appendChild(woodhouseImg);
+  const footer = document.createElement('footer');
+  footer.innerHTML = '<p>Built by Aurorn</p>';
+  document.body.appendChild(footer);
 }
 
 document.addEventListener('DOMContentLoaded', initialize);
