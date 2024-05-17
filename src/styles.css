@@ -22,22 +22,24 @@ body {
   flex-direction: column;
   background-image: url('./assets/images/Archer Background.jpg');
   background-color: rgba(0, 0, 0, 0.425);
-  background-size: cover;
+  background-size: cover; 
   background-position: center;
   background-repeat: no-repeat;
   margin: 0;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .transition-image {
   position: fixed;
-  top: 80px; 
+  top: 0;
   left: 0;
   width: 100%;
-  height: calc(100vh - 80px);
+  height: 100%; 
   object-fit: cover;
   opacity: 0;
-  z-index: 999;
-  animation: fadeIn 0.5s forwards, slideRight 1s 0.5s forwards;
+  z-index: 10000; 
+  animation: fadeIn 0.5s forwards, slideRight 1s 0.5s forwards; 
 }
 
 @keyframes fadeIn {
@@ -70,7 +72,7 @@ nav p {
   font-size: 50px;
   color: white;
   cursor: pointer;
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition: transform 0.1s ease, color 0.1s ease;
 }
 
 nav p:hover {
@@ -85,7 +87,7 @@ nav p:hover {
   align-items: center;
   text-align: center;
   padding: 80px;
-  overflow: auto; 
+  overflow: auto;
 }
 
 .home {
@@ -100,11 +102,11 @@ nav p:hover {
   font-family: 'Baveuse';
   font-size: 40px;
   color: #333;
-  text-shadow: 
-    -1px -1px 0 #fff,  
+  text-shadow:
+    -1px -1px 0 #fff,
     1px -1px 0 #fff,
     -1px 1px 0 #fff,
-    1px 1px 0 #fff; 
+    1px 1px 0 #fff;
 }
 
 .description {
@@ -119,7 +121,6 @@ nav p:hover {
   height: 500px;
   width: auto;
   transform: translateX(-50%);
-  
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
   z-index: 1000;
 }

@@ -3,19 +3,42 @@ import loadNav from './modules/nav';
 import loadHome from './modules/home';
 import loadMenu from './modules/menu';
 import loadAbout from './modules/about';
-import transitionImagePath from './assets/images/Archer Transition.png';
-import woodhouseImagePath from './assets/images/Woodhouse transparent.png'; // Import the image
+import transitionImagePath1 from './assets/images/Archer Transition.png';
+import transitionImagePath2 from './assets/images/Archer Transition 2.png';
+import transitionImagePath3 from './assets/images/Archer Transition 3.png';
+import transitionImagePath4 from './assets/images/Archer Transition 4.png';
+import woodhouseImagePath from './assets/images/Woodhouse transparent.png'; 
+
+
+const transitionImages = [
+  transitionImagePath1,
+  transitionImagePath2,
+  transitionImagePath3,
+  transitionImagePath4,
+];
+
+function getRandomTransitionImage() {
+  const randomIndex = Math.floor(Math.random() * transitionImages.length);
+  return transitionImages[randomIndex];
+}
 
 function createTransitionImage(callback) {
   const img = document.createElement('img');
-  img.src = transitionImagePath;
+  img.src = getRandomTransitionImage();
   img.classList.add('transition-image');
   document.body.appendChild(img);
 
+  
+  img.addEventListener('animationend', (event) => {
+    if (event.animationName === 'fadeIn') {
+      callback(); 
+    }
+  });
+
+  
   img.addEventListener('animationend', (event) => {
     if (event.animationName === 'slideRight') {
       img.remove();
-      callback();
     }
   });
 }
@@ -39,10 +62,10 @@ function initialize() {
     createTransitionImage(loadAbout);
   });
 
-  // Load home content by default
+
   loadHome();
 
-  // Add the Woodhouse image to the bottom center of the page
+  
   const woodhouseImg = document.createElement('img');
   woodhouseImg.src = woodhouseImagePath;
   woodhouseImg.classList.add('woodhouse-image');
